@@ -1,0 +1,29 @@
+import Image from "next/image";
+import partner1Img from "@/assets/images/partner-1.svg";
+import partner2Img from "@/assets/images/partner-2.svg";
+import partner3Img from "@/assets/images/partner-3.png";
+import partner4Img from "@/assets/images/partner-4.png";
+import partner5Img from "@/assets/images/partner-5.png";
+import partner6Img from "@/assets/images/partner-6.png";
+
+export const Sponsors = () => {
+	const partnerList = [
+		partner1Img,
+		partner2Img,
+		partner3Img,
+		partner4Img,
+		partner5Img,
+		partner6Img,
+	];
+
+	return (
+		<div className="flex flex-row items-center gap-2 justify-between py-[38px] px-[72px] ">
+			<p className="text-[24px] font-semibold w-max ">Trusted by</p>
+			<div className="flex flex-row items-center justify-around gap-[60px] px-[102px] ">
+				{partnerList.map((item, ind) => (
+					<Image src={item} alt={`partner-${ind}`} key={ind} />
+				))}
+			</div>
+		</div>
+	);
+};
