@@ -9,7 +9,7 @@ export const FounderMessage = () => {
 				<h2 className="text-[28px] leading-[normal] mb-6 ">
 					A message from our founder
 				</h2>
-				<p className="max-w-[468px] text-[20px] leading-[normal] ">
+				<p className="max-w-[468px] text-[20px] ">
 					At Bluetech Consulting, we are more than just a training and
 					consulting outfit; we are your trusted partner on the journey to
 					mastering the world class, highly demanded skill. With a passion for

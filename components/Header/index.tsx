@@ -30,7 +30,7 @@ const Header = () => {
 	const pathname = usePathname();
 
 	return (
-		<header className="fixed top-0 w-full bg-white flex flex-row items-center justify-center px-8 py-[38px] ">
+		<header className="fixed top-0 w-full bg-white flex flex-row items-center justify-center px-8 py-[38px] z-10 ">
 			<Link href="/" className="absolute left-8 top-[14px] ">
 				<LogoIcon />
 			</Link>

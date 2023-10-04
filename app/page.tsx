@@ -1,4 +1,10 @@
-import { DescCards, FounderMessage, Hero, Sponsors } from "@/pageParts/home";
+import {
+	DescCards,
+	FounderMessage,
+	Hero,
+	Sponsors,
+	Testimonials,
+} from "@/pageParts/home";
 
 const Home = () => {
 	return (
@@ -7,6 +13,7 @@ const Home = () => {
 			<Sponsors />
 			<DescCards />
 			<FounderMessage />
+			<Testimonials />
 		</main>
 	);
 };

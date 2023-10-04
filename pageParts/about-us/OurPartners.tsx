@@ -24,7 +24,7 @@ export const OurPartners = () => {
 			</h2>
 			<div className="flex flex-row items-center justify-around px-[102px] ">
 				{partnerList.map((item, ind) => (
-					<Image src={item} alt={`partner-${ind}`} />
+					<Image src={item} alt={`partner-${ind}`} key={ind} />
 				))}
 			</div>
 		</div>
