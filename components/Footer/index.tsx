@@ -31,7 +31,7 @@ const Footer = () => {
 
 	return (
 		<footer className="bg-[#051C2C] text-[#CCC] ">
-			<section className="border-b border-[#B5B5B5] px-[52px] pt-16 pb-[75px] flex flex-row items-start justify-between ">
+			<section className="border-b border-[#B5B5B5] lg:px-[52px] px-4 lg:pt-16 pt-10 pb-[75px] flex lg:flex-row flex-col items-start justify-between lg:gap-2 gap-12 ">
 				<div>
 					<div className="w-[135px] h-[56px] bg-[#D9D9D9] mb-6 "></div>
 					<div className="mb-4">
@@ -47,7 +47,7 @@ const Footer = () => {
 						))}
 					</div>
 				</div>
-				<div className="flex flex-row items-start gap-24 ">
+				<div className="flex lg:flex-row flex-col items-start lg:gap-24 gap-8 ">
 					<div>
 						<h3 className="text-white mb-4">Pages</h3>
 						<ul className="flex flex-col items-start gap-2 ">

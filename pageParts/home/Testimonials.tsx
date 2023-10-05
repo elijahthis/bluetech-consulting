@@ -20,15 +20,15 @@ export const Testimonials = () => {
 	];
 
 	return (
-		<section className="bg-[#E2E9EE] py-16 flex flex-col items-center">
-			<h2 className="mb-10 text-[28px] leading-[24px] text-center ">
+		<section className="bg-[#E2E9EE] py-16 px-6 flex flex-col items-center">
+			<h2 className="lg:mb-10 mb-4 text-[28px] leading-[24px] text-center ">
 				What people are saying
 			</h2>
-			<p className="mb-6 font-medium max-w-[700px] text-center ">
+			<p className="lg:mb-6 mb-12 font-medium max-w-[700px] text-center ">
 				We take pride in the positive feedback we receive from our clients. Here
 				are a few examples of feedback from our mentees.
 			</p>
-			<div className="grid grid-cols-3 gap-6 px-[238px]">
+			<div className="lg:grid lg:grid-cols-3 flex flex-col items-stretch lg:gap-6 gap-10 lg:px-[238px] px-0">
 				{testimonialList.map((item, ind) => (
 					<Testimonial data={item} key={ind} />
 				))}
