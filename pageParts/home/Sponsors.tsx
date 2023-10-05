@@ -17,11 +17,16 @@ export const Sponsors = () => {
 	];
 
 	return (
-		<div className="flex flex-row items-center gap-2 justify-between py-[38px] px-[72px] ">
+		<div className="flex lg:flex-row flex-col items-center gap-4 justify-between py-[38px] lg:px-[72px] px-4 ">
 			<p className="text-[24px] font-semibold w-max ">Trusted by</p>
-			<div className="flex flex-row items-center justify-around gap-[60px] px-[102px] ">
+			<div className="flex flex-row flex-wrap lg:items-center justify-around lg:gap-[60px] gap-8 lg:px-[102px] w-full ">
 				{partnerList.map((item, ind) => (
-					<Image src={item} alt={`partner-${ind}`} key={ind} />
+					<Image
+						src={item}
+						alt={`partner-${ind}`}
+						key={ind}
+						className="h-[28px]"
+					/>
 				))}
 			</div>
 		</div>

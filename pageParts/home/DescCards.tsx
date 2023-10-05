@@ -4,7 +4,7 @@ export const DescCards = () => {
 	return (
 		<section
 			className="grid grid-cols-3 gap-6 px-4 lg:px-[93px] py-8 pb-10 lg:py-10 lg:pb-[72px] "
-			style={{ gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))" }}
+			style={{ gridTemplateColumns: "repeat(auto-fit, minmax(328px, 1fr))" }}
 		>
 			<BlueCard title="Who we are">
 				<>
