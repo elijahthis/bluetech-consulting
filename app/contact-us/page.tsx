@@ -12,12 +12,12 @@ const ContactUs = () => {
 				navTo={{ label: "Contact Us", link: "/contact-us" }}
 			/>
 			{!done ? (
-				<div className="grid grid-cols-2 gap-[206px] px-[104px] pb-10 pt-[70px]  ">
+				<div className="lg:grid lg:grid-cols-2 flex flex-col items-stretch lg:gap-[206px] gap-10 lg:px-[104px] px-4 pb-10 lg:pt-[70px] pt-10  ">
 					<SideText />
 					<ContactForm setDone={(val: boolean) => setDone(val)} />
 				</div>
 			) : (
-				<div className="py-20 px-[282px] ">
+				<div className="py-20 lg:px-[282px] ">
 					<ContactSuccess />
 				</div>
 			)}

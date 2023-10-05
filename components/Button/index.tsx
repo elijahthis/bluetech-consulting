@@ -20,7 +20,7 @@ const Button = ({
 }: ButtonProps) => {
 	return (
 		<button
-			className={`rounded-2xl bg-[#051C2C] text-white w-max px-10 py-6 text-base `}
+			className={`lg:rounded-2xl rounded-lg bg-[#051C2C] text-white w-max lg:px-10 px-6 lg:py-6 py-4 text-base `}
 			onClick={(e: MouseEvent<HTMLButtonElement>) => {
 				if (disabled) e.preventDefault();
 				else if (!loading) onClick && onClick();

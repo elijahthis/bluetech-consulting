@@ -16,7 +16,7 @@ export const ContactForm = ({
 				setDone(true);
 			}}
 		>
-			<div className="grid grid-cols-2 gap-4">
+			<div className="lg:grid lg:grid-cols-2 flex flex-col items-stretch gap-4">
 				<InputComponent
 					label="First name"
 					placeholder="Enter First name"
