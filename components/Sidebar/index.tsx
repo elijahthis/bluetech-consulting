@@ -17,7 +17,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 		<aside
 			className={` fixed ${
 				isOpen ? "right-0" : "right-[-100%]"
-			} top-0 w-full max-w-[400px] bg-white h-screen transition-all duration-300 ease-in-out z-50 px-4 py-8`}
+			} top-0 w-full  bg-white h-screen transition-all duration-300 ease-in-out z-50 px-4 py-8`}
 		>
 			<div className="flex flex-row items-center justify-between">
 				<Link href="/" className="h-10 " onClick={toggleSidebar}>
