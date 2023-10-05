@@ -2,6 +2,7 @@
 import { LogoIcon } from "@/components/svgs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 const Header = () => {
 	const navList: { name: string; url: string }[] = [
@@ -30,8 +31,8 @@ const Header = () => {
 	const pathname = usePathname();
 
 	return (
-		<header className="fixed top-0 w-full bg-white flex flex-row items-center justify-center px-8 lg:py-[38px] py-9 z-10 ">
-			<Link href="/" className="absolute left-8 top-[14px] h-10 lg:h-[65px]">
+		<header className="fixed top-0 w-full bg-white flex flex-row items-center lg:justify-center justify-between lg:px-8 px-4 lg:py-[38px] py-4 z-10 ">
+			<Link href="/" className="lg:absolute left-8 top-[14px] h-10 lg:h-[65px]">
 				<LogoIcon className="h-full" />
 			</Link>
 			<nav className="hidden lg:block">
@@ -54,6 +55,7 @@ const Header = () => {
 					))}
 				</ul>
 			</nav>
+			<HiMenuAlt3 className="lg:hidden block" size={32} />
 		</header>
 	);
 };
