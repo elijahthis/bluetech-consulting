@@ -30,11 +30,11 @@ const Header = () => {
 	const pathname = usePathname();
 
 	return (
-		<header className="fixed top-0 w-full bg-white flex flex-row items-center justify-center px-8 py-[38px] z-10 ">
-			<Link href="/" className="absolute left-8 top-[14px] ">
-				<LogoIcon />
+		<header className="fixed top-0 w-full bg-white flex flex-row items-center justify-center px-8 lg:py-[38px] py-9 z-10 ">
+			<Link href="/" className="absolute left-8 top-[14px] h-10 lg:h-[65px]">
+				<LogoIcon className="h-full" />
 			</Link>
-			<nav>
+			<nav className="hidden lg:block">
 				<ul className="flex flex-row items-center gap-9 ">
 					{navList.map((navItem, ind) => (
 						<li

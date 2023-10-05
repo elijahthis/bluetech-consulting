@@ -7,7 +7,10 @@ const ContactUs = () => {
 	const [done, setDone] = useState(false);
 	return (
 		<main className="">
-			<TitleBanner title="Contact Us" />
+			<TitleBanner
+				title="Contact Us"
+				navTo={{ label: "Contact Us", link: "/contact-us" }}
+			/>
 			{!done ? (
 				<div className="grid grid-cols-2 gap-[206px] px-[104px] pb-10 pt-[70px]  ">
 					<SideText />

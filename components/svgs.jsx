@@ -1,10 +1,9 @@
-export const LogoIcon = () => (
+export const LogoIcon = ({ className = "" }) => (
 	<svg
-		width="183"
-		height="65"
 		viewBox="0 0 183 65"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
+		className={className}
 	>
 		<rect width="183" height="65" fill="#051C2C" />
 		<path

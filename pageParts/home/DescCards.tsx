@@ -2,7 +2,10 @@ import BlueCard from "@/components/BlueCard";
 
 export const DescCards = () => {
 	return (
-		<section className="grid grid-cols-3 gap-6 px-[93px] py-10 pb-[72px] ">
+		<section
+			className="grid grid-cols-3 gap-6 px-4 lg:px-[93px] py-8 pb-10 lg:py-10 lg:pb-[72px] "
+			style={{ gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))" }}
+		>
 			<BlueCard title="Who we are">
 				<>
 					At Bluetech Consulting, we are more than just a training and
