@@ -8,13 +8,15 @@ interface ImgTextColProps {
 
 const ImgTextCol = ({ imgURL, textSide, children }: ImgTextColProps) => {
 	return (
-		<div className={`px-[102px] grid grid-cols-2  items-center gap-12`}>
+		<div
+			className={`lg:px-[102px] px-4 lg:grid lg:grid-cols-2 flex flex-col items-center gap-12`}
+		>
 			<Image
 				src={imgURL}
 				alt=""
 				width={594}
 				height={443}
-				className={`w-full ${textSide === "right" ? "" : "order-1"}`}
+				className={`w-full ${textSide === "right" ? "" : "lg:order-1 right"}`}
 			/>
 			<div>{children}</div>
 		</div>
@@ -33,7 +35,9 @@ export const TiTleTextStory = ({
 	return (
 		<>
 			{smallTitle ? <p className="mb-4">{smallTitle}</p> : <></>}
-			<h2 className="mb-10 text-[28px] leading-[24px]">{title}</h2>
+			<h2 className="lg:mb-10 mb-5 text-[28px] lg:leading-[24px] leading-[normal] ">
+				{title}
+			</h2>
 			<div className="text-[20px] leading-[24px] ">{body}</div>
 		</>
 	);

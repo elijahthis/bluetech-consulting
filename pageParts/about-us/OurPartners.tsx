@@ -19,10 +19,10 @@ export const OurPartners = () => {
 	return (
 		<div className="pt-[66px] pb-[30px] ">
 			<p className="text-center mb-4">Our Partners</p>
-			<h2 className="text-center mb-16 text-[28px] leading-[24px] ">
+			<h2 className="text-center mb-16 text-[28px] lg:leading-[24px] ">
 				We are trusted by the following
 			</h2>
-			<div className="flex flex-row items-center justify-around px-[102px] ">
+			<div className="flex flex-row flex-wrap items-center justify-around gap-4 lg:px-[102px] px-4 ">
 				{partnerList.map((item, ind) => (
 					<Image src={item} alt={`partner-${ind}`} key={ind} />
 				))}

@@ -4,7 +4,7 @@ import about2Img from "@/assets/images/about-2.png";
 
 export const StoryVision = () => {
 	return (
-		<div className="grid grid-rows-2 gap-11 pb-11 ">
+		<div className="lg:grid lg:grid-rows-2 flex flex-col items-stretch lg:gap-11 gap-10 pb-11 ">
 			<ImgTextCol imgURL={about1Img} textSide="right">
 				<TiTleTextStory
 					title="Our Story"

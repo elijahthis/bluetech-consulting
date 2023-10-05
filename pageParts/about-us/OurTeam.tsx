@@ -30,12 +30,12 @@ export const OurTeam = () => {
 	];
 
 	return (
-		<div className="bg-[#E2E9EE] pt-12 pb-20 px-[102px] ">
-			<p className="text-center mb-[30px]">Our Team</p>
-			<h2 className="text-center mb-[78px] text-[28px] leading-[24px] ">
+		<div className="bg-[#E2E9EE] pt-12 pb-20 lg:px-[102px] px-4 ">
+			<p className="text-center lg:mb-[30px] mb-3">Our Team</p>
+			<h2 className="text-center lg:mb-[78px] mb-10 text-[28px] lg:leading-[24px] leading-[normal] ">
 				Meet those behind the amazing works
 			</h2>
-			<div className="grid grid-cols-3 gap-6">
+			<div className="lg:grid lg:grid-cols-3 flex flex-col items-stretch gap-6">
 				{teamList.map((teamMember, ind) => (
 					<TeamCard data={teamMember} key={ind} />
 				))}
