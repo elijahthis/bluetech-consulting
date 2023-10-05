@@ -3,32 +3,14 @@ import { LogoIcon } from "@/components/svgs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiMenuAlt3 } from "react-icons/hi";
+import Sidebar from "../Sidebar";
+import { useState } from "react";
+import { navList } from "@/data/constants";
 
 const Header = () => {
-	const navList: { name: string; url: string }[] = [
-		{
-			name: "Home",
-			url: "/",
-		},
-		{
-			name: "About Us",
-			url: "/about-us",
-		},
-		{
-			name: "Courses",
-			url: "/courses",
-		},
-		{
-			name: "Consulting",
-			url: "/consulting",
-		},
-		{
-			name: "Contact Us",
-			url: "/contact-us",
-		},
-	];
-
 	const pathname = usePathname();
+
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<header className="fixed top-0 w-full bg-white flex flex-row items-center lg:justify-center justify-between lg:px-8 px-4 lg:py-[38px] py-4 z-10 ">
@@ -55,7 +37,12 @@ const Header = () => {
 					))}
 				</ul>
 			</nav>
-			<HiMenuAlt3 className="lg:hidden block" size={32} />
+			<HiMenuAlt3
+				className="lg:hidden block cursor-pointer"
+				size={32}
+				onClick={() => setIsOpen(true)}
+			/>
+			<Sidebar isOpen={isOpen} toggleSidebar={() => setIsOpen((val) => !val)} />
 		</header>
 	);
 };
