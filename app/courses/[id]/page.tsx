@@ -19,7 +19,7 @@ const CoursePage = ({ params }: { params: { id: string } }) => {
 	return (
 		<main>
 			<TitleBanner
-				title="Courses"
+				title={currentCourse.short_title}
 				navList={[
 					{ label: "Courses", link: "/courses" },
 					{ label: currentCourse.short_title, link: currentCourse.page_url },
