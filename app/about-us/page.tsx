@@ -11,7 +11,7 @@ const AboutUs = () => {
 		<main>
 			<TitleBanner
 				title="About Us"
-				navTo={{ label: "About Us", link: "/about-us" }}
+				navList={[{ label: "About Us", link: "/about-us" }]}
 			/>
 			<div className="py-[74px] ">
 				<StoryVision />

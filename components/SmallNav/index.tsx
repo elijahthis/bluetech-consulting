@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { Fragment } from "react";
 
-const SmallNav = ({ navTo }: { navTo: { label: string; link: string } }) => {
+const SmallNav = ({
+	navList,
+}: {
+	navList: { label: string; link: string }[];
+}) => {
 	return (
 		<div className="grid place-items-center absolute w-full bottom-[-27px] ">
 			<div
@@ -11,7 +16,12 @@ const SmallNav = ({ navTo }: { navTo: { label: string; link: string } }) => {
 					Home
 				</Link>
 				<span>|</span>
-				<Link href={navTo.link}>{navTo.label}</Link>
+				{navList.map((navTo, index) => (
+					<Fragment key={index}>
+						<Link href={navTo.link}>{navTo.label}</Link>
+						{index < navList.length - 1 && <span>|</span>}
+					</Fragment>
+				))}
 			</div>
 		</div>
 	);

@@ -3,14 +3,14 @@ import styles from "./styles.module.css";
 
 interface TitleBannerProps {
 	title: string;
-	navTo: { label: string; link: string };
+	navList: { label: string; link: string }[];
 }
 
-const TitleBanner = ({ title, navTo }: TitleBannerProps) => {
+const TitleBanner = ({ title, navList }: TitleBannerProps) => {
 	return (
 		<section className={`h-[186px] pt-16 relative ${styles.TitleBanner} `}>
 			<h1 className="text-center">{title}</h1>
-			<SmallNav navTo={navTo} />
+			<SmallNav navList={navList} />
 		</section>
 	);
 };

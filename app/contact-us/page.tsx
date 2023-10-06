@@ -9,7 +9,7 @@ const ContactUs = () => {
 		<main className="">
 			<TitleBanner
 				title="Contact Us"
-				navTo={{ label: "Contact Us", link: "/contact-us" }}
+				navList={[{ label: "Contact Us", link: "/contact-us" }]}
 			/>
 			{!done ? (
 				<div className="lg:grid lg:grid-cols-2 flex flex-col items-stretch lg:gap-[206px] gap-10 lg:px-[104px] px-4 pb-10 lg:pt-[70px] pt-10  ">
