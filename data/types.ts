@@ -1,4 +1,5 @@
 export type ICourse = {
+	id: string;
 	long_title: string;
 	short_title: string;
 	short_desc: string;

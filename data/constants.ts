@@ -25,6 +25,7 @@ export const navList: { name: string; url: string }[] = [
 
 export const courseList: ICourse[] = [
 	{
+		id: "business-analysis",
 		long_title: "Business Analysis",
 		short_title: "Business Analysis",
 		short_desc:
@@ -59,6 +60,7 @@ export const courseList: ICourse[] = [
 		schedule: ["Weds: 6pm - 8pm", "Sats: 10am - 3pm "],
 	},
 	{
+		id: "scrum-mastering",
 		long_title: "Scrum Mastering",
 		short_title: "Scrum Master",
 		short_desc:
@@ -93,6 +95,7 @@ export const courseList: ICourse[] = [
 		schedule: ["Weds: 6pm - 8pm", "Sats: 10am - 3pm"],
 	},
 	{
+		id: "product-ownership",
 		long_title: "Product Ownership",
 		short_title: "Product Owner",
 		short_desc:
@@ -130,6 +133,7 @@ export const courseList: ICourse[] = [
 		schedule: ["Weds: 6pm - 8pm", "Sats: 10am - 3pm"],
 	},
 	{
+		id: "data-analysis",
 		long_title: "Data Analysis",
 		short_title: "Data Analysis",
 		short_desc:

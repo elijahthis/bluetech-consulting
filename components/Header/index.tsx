@@ -23,7 +23,8 @@ const Header = () => {
 						<li
 							key={ind}
 							className={`${
-								navItem.url === pathname
+								(pathname.startsWith(navItem.url) && navItem.url !== "/") ||
+								(pathname === "/" && navItem.url === "/")
 									? "text-[#051C2C] underline font-bold "
 									: "text-[#8A8A8A] font-medium"
 							} `}
