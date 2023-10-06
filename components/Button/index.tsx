@@ -4,7 +4,7 @@ import { MouseEvent } from "react";
 interface ButtonProps {
 	children: string | JSX.Element;
 	className?: string;
-	onClick: () => void;
+	onClick?: () => void;
 	loading?: boolean;
 	disabled?: boolean;
 	type?: "button" | "submit" | "reset" | undefined;

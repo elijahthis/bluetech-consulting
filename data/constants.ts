@@ -20,3 +20,18 @@ export const navList: { name: string; url: string }[] = [
 		url: "/contact-us",
 	},
 ];
+
+export const courseList: {
+	long_title: string;
+	short_title: string;
+	short_desc: string;
+	img_url: string;
+	page_url: string;
+	overview: string;
+	learning_points: string[];
+	course_highlights: string[];
+	price: number;
+	duration: string;
+	mode: string;
+	schedule: string[];
+}[] = [];
