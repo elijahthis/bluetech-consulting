@@ -22,7 +22,7 @@ export const OurPartners = () => {
 			<h2 className="text-center mb-16 text-[28px] lg:leading-[24px] ">
 				We are trusted by the following
 			</h2>
-			<div className="flex flex-row flex-wrap items-center justify-around gap-4 lg:px-[102px] px-4 ">
+			<div className="flex flex-row flex-wrap items-center justify-around gap-4 lg:px-[7.08vw] px-4 ">
 				{partnerList.map((item, ind) => (
 					<Image src={item} alt={`partner-${ind}`} key={ind} />
 				))}

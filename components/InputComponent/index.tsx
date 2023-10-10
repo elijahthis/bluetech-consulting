@@ -1,6 +1,7 @@
 interface InputComponentProps {
 	label: string;
 	name: string;
+	showLabel?: boolean;
 	value?: string;
 	onChange?: (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -21,6 +22,7 @@ interface InputComponentProps {
 const InputComponent = ({
 	label,
 	name,
+	showLabel = true,
 	value,
 	onChange,
 	type,
@@ -31,7 +33,7 @@ const InputComponent = ({
 			htmlFor=""
 			className="flex flex-col items-stretch gap-2 text-[051C2C] font-medium "
 		>
-			{label}
+			{showLabel ? label : ""}
 			{type === "textarea" ? (
 				<textarea
 					name={name}
@@ -40,7 +42,8 @@ const InputComponent = ({
 					rows={5}
 					// onChange={onChange}
 					placeholder={placeholder}
-					className={`font-medium py-4 px-6 rounded border border-[#CCC] focus:outline-none focus:ring-2 focus:ring-[#1E86FF] focus:border-transparent `}
+					className={`font-medium py-4 px-6 rounded border border-[#CCC] focus:outline-none focus:ring-2 focus:ring-[#051c2c] focus:border-transparent `}
+					aria-label={label}
 				></textarea>
 			) : (
 				<input
@@ -49,7 +52,8 @@ const InputComponent = ({
 					// value={value}
 					// onChange={onChange}
 					placeholder={placeholder}
-					className={`font-medium py-4 px-6 rounded border border-[#CCC] focus:outline-none focus:ring-2 focus:ring-[#1E86FF] focus:border-transparent `}
+					className={`font-medium py-4 px-6 rounded border border-[#CCC] focus:outline-none focus:ring-2 focus:ring-[#051c2c] focus:border-transparent `}
+					aria-label={label}
 				/>
 			)}
 		</label>

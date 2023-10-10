@@ -17,7 +17,7 @@ const ContactUs = () => {
 					<ContactForm setDone={(val: boolean) => setDone(val)} />
 				</div>
 			) : (
-				<div className="py-20 lg:px-[282px] ">
+				<div className="py-20 lg:px-[19.58vw] ">
 					<ContactSuccess />
 				</div>
 			)}

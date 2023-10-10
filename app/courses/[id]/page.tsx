@@ -29,7 +29,7 @@ const CoursePage = ({ params }: { params: { id: string } }) => {
 				]}
 			/>
 			<div
-				className="pt-[77px] pb-10 px-4 lg:px-[102px] bg-[#F0F9FF] flex flex-col items-stretch gap-6 lg:grid  "
+				className="pt-[77px] pb-10 px-4 lg:px-[7.08vw] bg-[#F0F9FF] flex flex-col items-stretch gap-6 lg:grid  "
 				style={{ gridTemplateColumns: "61fr 39fr" }}
 			>
 				<OverviewCard courseData={currentCourse} />

@@ -9,7 +9,7 @@ interface ImgTextColProps {
 const ImgTextCol = ({ imgURL, textSide, children }: ImgTextColProps) => {
 	return (
 		<div
-			className={`lg:px-[102px] px-4 lg:grid lg:grid-cols-2 flex flex-col items-center gap-12`}
+			className={`lg:px-[7.08vw] px-4 lg:grid lg:grid-cols-2 flex flex-col items-center gap-12`}
 		>
 			<Image
 				src={imgURL}

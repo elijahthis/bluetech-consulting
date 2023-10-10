@@ -1,5 +1,5 @@
 "use client";
-import { MouseEvent } from "react";
+import { CSSProperties, MouseEvent } from "react";
 
 interface ButtonProps {
 	children: string | JSX.Element;
@@ -8,6 +8,7 @@ interface ButtonProps {
 	loading?: boolean;
 	disabled?: boolean;
 	type?: "button" | "submit" | "reset" | undefined;
+	style?: CSSProperties;
 }
 
 const Button = ({
@@ -17,6 +18,7 @@ const Button = ({
 	loading = false,
 	disabled = false,
 	type = "button",
+	style,
 }: ButtonProps) => {
 	return (
 		<button
@@ -27,6 +29,7 @@ const Button = ({
 			}}
 			type={type}
 			disabled={disabled}
+			style={style}
 		>
 			{children}
 		</button>

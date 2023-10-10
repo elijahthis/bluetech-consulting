@@ -30,7 +30,7 @@ export const OurTeam = () => {
 	];
 
 	return (
-		<div className="bg-[#E2E9EE] pt-12 pb-20 lg:px-[102px] px-4 ">
+		<div className="bg-[#E2E9EE] pt-12 pb-20 lg:px-[7.08vw] px-4 ">
 			<p className="text-center lg:mb-[30px] mb-3">Our Team</p>
 			<h2 className="text-center lg:mb-[78px] mb-10 text-[28px] lg:leading-[24px] leading-[normal] ">
 				Meet those behind the amazing works
