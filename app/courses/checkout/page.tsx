@@ -19,14 +19,17 @@ const CheckoutPage = () => {
 					<PersonalInfo
 						currentStep={currentStep}
 						setCurrentStep={setCurrentStep}
+						key={0}
 					/>,
 					<PaymentMethod
 						currentStep={currentStep}
 						setCurrentStep={setCurrentStep}
+						key={1}
 					/>,
 					<PaymentDetails
 						currentStep={currentStep}
 						setCurrentStep={setCurrentStep}
+						key={2}
 					/>,
 				]}
 			/>
