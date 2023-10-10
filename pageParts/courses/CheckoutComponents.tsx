@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import InputComponent from "@/components/InputComponent";
 import RadioComponent from "@/components/RadioComponent";
 import { BankIcon, CardIcon, PaypalIcon } from "@/components/svgs";
+import { useRouter } from "next/navigation";
 import { Dispatch, SetStateAction } from "react";
 
 interface PersonalInfoProps {
@@ -123,6 +124,8 @@ export const PaymentDetails = ({
 	currentStep,
 	setCurrentStep,
 }: PersonalInfoProps) => {
+	const router = useRouter();
+
 	return (
 		<form
 			action=""
@@ -164,7 +167,9 @@ export const PaymentDetails = ({
 			</div>
 			<Button
 				type="submit"
-				onClick={() => {}}
+				onClick={() => {
+					router.push("/courses/successful");
+				}}
 				style={{ width: "100%", marginTop: "8px" }}
 			>
 				Proceed to Payment
