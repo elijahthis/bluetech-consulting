@@ -14,3 +14,11 @@ export type ICourse = {
 	mode: string;
 	schedule: string[];
 };
+
+export type IConsulting = {
+	id: string;
+	title: string;
+	desc: string | JSX.Element;
+	img_url: string;
+	booking_url: string;
+};

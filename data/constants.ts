@@ -1,4 +1,4 @@
-import { ICourse } from "./types";
+import { IConsulting, ICourse } from "./types";
 
 export const navList: { name: string; url: string }[] = [
 	{
@@ -169,5 +169,22 @@ export const courseList: ICourse[] = [
 		duration: "8 weeks",
 		mode: "100% Online",
 		schedule: ["Weds: 6pm - 8pm", "Sats: 10am - 3pm "],
+	},
+];
+
+export const consultingList: IConsulting[] = [
+	{
+		id: "one_on_one",
+		title: "One-on-one Consultation",
+		desc: "Today is the best day to launch your career into tech. If you are considering our taster session or would like to dive straight into our business analyst, scrum master or product owner training, then contact us now.",
+		img_url: "https://loremflickr.com/594/443?random=1",
+		booking_url: "",
+	},
+	{
+		id: "digital_transformation",
+		title: "Digital Transformation Consulting",
+		desc: "Today is the best day to launch your career into tech. If you are considering our taster session or would like to dive straight into our business analyst, scrum master or product owner training, then contact us now. Today is the best day to launch your career into tech. If you are considering our taster session or would like to dive straight into our business analyst, scrum master or product owner training, then contact us now.Today is the best day to launch your career into tech. If you are considering our taster session or would like to dive straight into our business analyst, scrum master or product owner training, then contact us now.Today is the best day to launch your career into tech. If you are considering our taster session or would like to dive straight into our business analyst, scrum master or product owner training, then contact us now.",
+		img_url: "https://loremflickr.com/594/443?random=4",
+		booking_url: "",
 	},
 ];
