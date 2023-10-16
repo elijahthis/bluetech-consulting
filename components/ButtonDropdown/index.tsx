@@ -45,13 +45,14 @@ ButtonDropdownProps) => {
 						: "h-0 top-[95%] opacity-0"
 				}`}
 			>
-				{optionList.map((item) => (
+				{optionList.map((item, ind) => (
 					<div
 						className="p-2 transition-all duration-300 flex flex-col items-stretch gap-1 bg-white text-[#051c2c] cursor-pointer hover:bg-[#051c2c] hover:text-white "
 						onClick={() => {
 							item.action();
 							setOpen(false);
 						}}
+						key={ind}
 					>
 						<p className="ButtonDropdown__drop__item__title">
 							{item.label.title}
