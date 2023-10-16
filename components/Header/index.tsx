@@ -13,7 +13,7 @@ const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header className="fixed top-0 w-full bg-white flex flex-row items-center lg:justify-center justify-between lg:px-8 px-4 lg:py-[38px] py-4 z-10 ">
+		<header className="fixed top-0 w-full bg-white flex flex-row items-center lg:justify-center justify-between lg:px-8 px-4 lg:py-[38px] py-4 z-30 ">
 			<Link href="/" className="lg:absolute left-8 top-[14px] h-10 lg:h-[65px]">
 				<LogoIcon className="h-full" />
 			</Link>
