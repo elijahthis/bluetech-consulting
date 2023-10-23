@@ -18,7 +18,7 @@ export const CourseList = () => {
 };
 
 const CourseItem = ({ courseData }: { courseData: ICourse }) => (
-	<div className="bg-white rounded-3xl overflow-hidden ">
+	<div className="bg-white rounded-3xl overflow-hidden flex flex-col items-stretch ">
 		<Image
 			src={courseData.img_url_sm}
 			alt={courseData.short_title}
@@ -26,16 +26,19 @@ const CourseItem = ({ courseData }: { courseData: ICourse }) => (
 			height={342}
 			className="w-full"
 		/>
-		<div className="pt-6 pb-8 px-6 ">
-			<h2 className="mb-4 text-[24px] leading-[24px] ">
-				{courseData.long_title}
-			</h2>
-			<p className="text-base leading-[24px] font-medium mb-6 ">
-				{courseData.short_desc}
-			</p>
+		{/* <div className="   "> */}
+		<h2 className="mb-4 text-[24px] leading-[24px] mt-6 px-6 ">
+			{courseData.long_title}
+		</h2>
+		<p className="text-base leading-[24px] font-medium mb-6 px-6 ">
+			{courseData.short_desc}
+		</p>
+		<div className="px-6 pb-8 mt-auto">
 			<Link href={courseData.page_url}>
 				<Button>View More</Button>
 			</Link>
 		</div>
+
+		{/* </div> */}
 	</div>
 );

@@ -61,7 +61,7 @@ export const courseList: ICourse[] = [
 	},
 	{
 		id: "scrum-mastering",
-		long_title: "Scrum Mastering",
+		long_title: "Scrum Master",
 		short_title: "Scrum Master",
 		short_desc:
 			"Master the core concepts of Scrum, including the roles and responsibilities of the Scrum Master, Product Owner, and Development Team, as well as Scrum ceremonies and artifacts in our experiential learning sessions, power-packed with activities, role-plays, real-world simulations, and case studies",
@@ -96,7 +96,7 @@ export const courseList: ICourse[] = [
 	},
 	{
 		id: "product-ownership",
-		long_title: "Product Ownership",
+		long_title: "Product Owner",
 		short_title: "Product Owner",
 		short_desc:
 			"The Product Owner role is arguably the most important role in Scrum — and the most challenging. The Product Owner is part project manager, part product manager, and part customer advocate. This person must ensure the customer’s wants and needs are understood while ensuring that the team ...",
