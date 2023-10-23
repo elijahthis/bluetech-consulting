@@ -25,3 +25,15 @@ h6 {
 	font-weight: 700;
 	color: #051c2c;
 }
+
+.hero-vid {
+	height: calc(100vh - 100px);
+	width: 100vw;
+	object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+	.hero-vid {
+		height: calc(100vh - 72px);
+	}
+}

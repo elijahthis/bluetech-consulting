@@ -15,7 +15,7 @@ const AboutUs = () => {
 			/>
 			<div className="py-[74px] ">
 				<StoryVision />
-				<OurTeam />
+				{/* <OurTeam /> */}
 				<OurValues />
 				<OurPartners />
 			</div>

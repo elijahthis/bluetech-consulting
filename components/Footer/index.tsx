@@ -13,7 +13,7 @@ const Footer = () => {
 		{ label: "About us", link: "/about-us" },
 		{ label: "Contact us", link: "/contact-us" },
 		{ label: "Courses", link: "/courses" },
-		{ label: "Consultation", link: "/consultation" },
+		{ label: "Consulting", link: "/consulting" },
 	];
 
 	const availabilitylist: { date: string; time: string }[] = [
@@ -23,10 +23,10 @@ const Footer = () => {
 	];
 
 	const socialList: { icon: JSX.Element; link: string }[] = [
-		{ icon: <FacebookIcon />, link: "" },
-		{ icon: <TwitterIcon />, link: "" },
-		{ icon: <InstagramIcon />, link: "" },
-		{ icon: <LinkedInIcon />, link: "" },
+		{ icon: <FacebookIcon />, link: "/" },
+		{ icon: <TwitterIcon />, link: "/" },
+		{ icon: <InstagramIcon />, link: "/" },
+		{ icon: <LinkedInIcon />, link: "/" },
 	];
 
 	return (

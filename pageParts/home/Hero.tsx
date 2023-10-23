@@ -1,7 +1,7 @@
 export const Hero = () => {
 	return (
 		<section>
-			<video className="h-screen w-screen object-cover" muted autoPlay loop>
+			<video className="hero-vid object-cover" muted autoPlay loop>
 				<source
 					src={
 						"https://res.cloudinary.com/dywp91yx7/video/upload/f_auto:video,q_auto/v1/bluetech-consulting/ft0roceckcp0d31fbgdp"
