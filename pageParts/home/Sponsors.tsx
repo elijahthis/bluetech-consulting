@@ -17,7 +17,7 @@ export const Sponsors = () => {
 	];
 
 	return (
-		<div className="flex lg:flex-row flex-col items-center gap-4 justify-between py-[38px] lg:px-[72px] px-4 ">
+		<div className="flex flex-col items-center gap-4 justify-between py-[38px] lg:px-[72px] px-4 ">
 			<p className="text-[24px] font-semibold w-max ">Trusted by</p>
 			<div className="flex flex-row flex-wrap lg:items-center justify-around lg:gap-[60px] gap-8 lg:px-[7.08vw] w-full ">
 				{partnerList.map((item, ind) => (
@@ -25,7 +25,7 @@ export const Sponsors = () => {
 						src={item}
 						alt={`partner-${ind}`}
 						key={ind}
-						className="h-[28px]"
+						className="lg:min-h-[60px] min-h-[40px] w-max"
 					/>
 				))}
 			</div>

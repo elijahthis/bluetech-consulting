@@ -3,19 +3,19 @@ import { OpenQuotesIcon } from "@/components/svgs";
 export const Testimonials = () => {
 	const testimonialList: { name: string; desc: string; body: string }[] = [
 		{
-			name: "Tola",
-			desc: "BA Candidate",
-			body: "Bluetechconsulting team was able to provide the right level of support during our Agile Transformation journey. They understood our needs and tailored solutions that helped achieve our goal.",
+			name: "Toyin",
+			desc: "Business Analysis candidate",
+			body: "Hi Yinka, just to let you know that I have been offered a job as a business analyst. Thanks for your help and support. Your training was invaluable.",
 		},
 		{
-			name: "Anu",
-			desc: "Scrum Master candidate",
-			body: "Bluetechconsulting team was able to provide the right level of support during our Agile Transformation journey. They understood our needs and tailored solutions that helped achieve our goal.",
+			name: "Folake",
+			desc: "Business Analysis candidate",
+			body: "I wish to express my gratitude and satisfaction regarding Business Analysis bootcamp. It was an outstanding learning experience, and I believe it has greatly contributed to my personal and professional growth.",
 		},
 		{
-			name: "John Doe",
+			name: "Ade",
 			desc: "Scrum Master candidate",
-			body: "Bluetechconsulting team was able to provide the right level of support during our Agile Transformation journey. They understood our needs and tailored solutions that helped achieve our goal.",
+			body: "Good news. I got the BA job with Vodafone",
 		},
 	];
 
@@ -42,12 +42,12 @@ const Testimonial = ({
 }: {
 	data: { name: string; desc: string; body: string };
 }) => (
-	<div className="bg-white px-6 py-3 pt-9 rounded-lg relative ">
+	<div className="bg-white px-6 py-3 pt-9 rounded-lg relative flex flex-col items-stretch ">
 		<span className="absolute top-[-15px] ">
 			<OpenQuotesIcon />
 		</span>
 		<p className="mb-6">{data.body}</p>
-		<p className="text-[18px] leading-[24px] font-bold text-right mb-1">
+		<p className="text-[18px] leading-[24px] font-bold text-right mb-1 mt-auto">
 			{data.name}
 		</p>
 		<p className="text-right text-[18px] leading-[24px] font-medium ">

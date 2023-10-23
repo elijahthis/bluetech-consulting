@@ -1,5 +1,5 @@
 import Image from "next/image";
-import home1Img from "@/assets/images/home-1.png";
+import home1Img from "@/assets/images/about-selfie.jpg";
 
 export const FounderMessage = () => {
 	return (
@@ -7,18 +7,34 @@ export const FounderMessage = () => {
 			<Image
 				src={home1Img}
 				alt={`Founder - Yinka`}
-				className="w-full lg:w-[312px]"
+				className="w-full lg:w-[400px]"
 			/>
 			<div>
 				<h2 className="text-[28px] leading-[normal] mb-6 ">
-					A message from our founder
+					Meet the CEO and founder
 				</h2>
 				<p className="lg:max-w-[468px] text-[20px] ">
-					At Bluetech Consulting, we are more than just a training and
-					consulting outfit; we are your trusted partner on the journey to
-					mastering the world class, highly demanded skill. With a passion for
-					education and a commitment to excellence, we empower individuals and
-					organizations to thrive in the ever-evolving digital landscape.{" "}
+					Ibiyinka Aina is the founder and COO of Bluetech Consulting. He has
+					vast experience implementing and supporting Digital and Agile
+					transformation initiatives within banking, insurance, fintech, and
+					Start-Ups in United Kingdom and Europe.
+					<br />
+					<br />
+					He is also experienced digital strategy, transforming existing
+					operation models, business processes, improving the end-to-end
+					customer journey, and bring new digital products to market from
+					inception. <br />
+					<br />
+					He has more than 15 years' experience consultancy as a Business
+					Analysis, Scrum Master, and a Product Owner. <br />
+					<br />
+					Ibiyinka has mentored more than 100 mentees, guiding most of them
+					through job interviews process and providing on-the-job support.{" "}
+					<br />
+					<br />
+					His degrees are in Computer Science, (BSc, MSc), and Business
+					Administration. He is a family man, and an ardent Arsenal Football
+					Club
 				</p>
 			</div>
 		</section>
