@@ -24,7 +24,7 @@ export const StoryVision = () => {
 					}
 				/>
 			</ImgTextCol>
-			<ImgTextCol imgURL={about2Img} textSide="left">
+			<ImgTextCol imgURL={about2Img} textSide="right">
 				<TiTleTextStory
 					title="Our Vision & Mission statements"
 					body={
