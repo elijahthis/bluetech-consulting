@@ -5,8 +5,8 @@ const Consulting = () => {
 	return (
 		<main>
 			<TitleBanner
-				title="Consultation"
-				navList={[{ label: "Consultation", link: "/consultation" }]}
+				title="Consulting"
+				navList={[{ label: "Consulting", link: "/consulting" }]}
 			/>
 			<ConsultingList />
 		</main>
