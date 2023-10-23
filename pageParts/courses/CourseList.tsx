@@ -30,7 +30,7 @@ const CourseItem = ({ courseData }: { courseData: ICourse }) => (
 		<h2 className="mb-4 text-[24px] leading-[24px] mt-6 px-6 ">
 			{courseData.long_title}
 		</h2>
-		<p className="text-base leading-[24px] font-medium mb-6 px-6 ">
+		<p className="text-base leading-[24px]  mb-6 px-6 ">
 			{courseData.short_desc}
 		</p>
 		<div className="px-6 pb-8 mt-auto">

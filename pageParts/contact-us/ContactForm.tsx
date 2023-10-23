@@ -51,7 +51,6 @@ export const ContactForm = ({
 				placeholder="Enter Subject"
 				name="subject"
 				type="text"
-				required={true}
 			/>
 			<InputComponent
 				label="Comment"

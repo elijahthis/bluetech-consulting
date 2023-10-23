@@ -55,7 +55,7 @@ export const NumberedItem = ({
 			{index}
 		</span>
 		<div>
-			<h6 className="text-base">{title}</h6>
+			<p className="text-base">{title}</p>
 		</div>
 	</li>
 );

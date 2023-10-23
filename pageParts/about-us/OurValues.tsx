@@ -17,7 +17,7 @@ export const OurValues = () => {
 		<div className="pt-16 mb-16">
 			<ImgTextCol imgURL={about3Img} textSide="right">
 				<TiTleTextStory
-					smallTitle="Our Values"
+					// smallTitle="Our Values"
 					title="What makes us exceptional"
 					body={
 						<ol className="list-none flex flex-col items-stretch gap-4 text-base ">
