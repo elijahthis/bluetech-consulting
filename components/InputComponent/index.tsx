@@ -17,6 +17,7 @@ interface InputComponentProps {
 		| "textarea"
 		| undefined;
 	placeholder?: string;
+	required?: boolean;
 }
 
 const InputComponent = ({
@@ -27,6 +28,7 @@ const InputComponent = ({
 	onChange,
 	type,
 	placeholder,
+	required = false,
 }: InputComponentProps) => {
 	return (
 		<label
@@ -44,6 +46,7 @@ const InputComponent = ({
 					placeholder={placeholder}
 					className={`font-medium py-4 px-6 rounded border border-[#CCC] focus:outline-none focus:ring-2 focus:ring-[#051c2c] focus:border-transparent `}
 					aria-label={label}
+					required={required}
 				></textarea>
 			) : (
 				<input
@@ -54,6 +57,7 @@ const InputComponent = ({
 					placeholder={placeholder}
 					className={`font-medium py-4 px-6 rounded border border-[#CCC] focus:outline-none focus:ring-2 focus:ring-[#051c2c] focus:border-transparent `}
 					aria-label={label}
+					required={required}
 				/>
 			)}
 		</label>

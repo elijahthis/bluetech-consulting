@@ -22,12 +22,14 @@ export const ContactForm = ({
 					placeholder="Enter First name"
 					name="firstName"
 					type="text"
+					required={true}
 				/>
 				<InputComponent
 					label="Last name"
 					placeholder="Enter Last name"
 					name="lastName"
 					type="text"
+					required={true}
 				/>
 			</div>
 			<InputComponent
@@ -35,24 +37,28 @@ export const ContactForm = ({
 				placeholder="Enter Phone"
 				name="phone"
 				type="tel"
+				required={true}
 			/>
 			<InputComponent
 				label="Email address"
 				placeholder="Email address"
 				name="email"
 				type="email"
+				required={true}
 			/>
 			<InputComponent
 				label="Subject"
 				placeholder="Enter Subject"
 				name="subject"
 				type="text"
+				required={true}
 			/>
 			<InputComponent
 				label="Comment"
 				placeholder="Enter comment description"
 				name="comment"
 				type="textarea"
+				required={true}
 			/>
 			<Button type="submit" onClick={() => {}}>
 				Submit Feedback
