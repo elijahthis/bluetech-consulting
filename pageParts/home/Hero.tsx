@@ -4,7 +4,7 @@ export const Hero = () => {
 			<video className="h-screen w-screen object-cover" muted autoPlay loop>
 				<source
 					src={
-						"https://res.cloudinary.com/dywp91yx7/video/upload/v1696440993/bluetech-consulting/short-vid.mp4"
+						"https://res.cloudinary.com/dywp91yx7/video/upload/f_auto:video,q_auto/v1/bluetech-consulting/ft0roceckcp0d31fbgdp"
 					}
 					type="video/mp4"
 				/>
