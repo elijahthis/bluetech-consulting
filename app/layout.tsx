@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Footer from "@/components/Footer";
-import { headers } from "next/headers";
 import Script from "next/script";
 
 const roboto = Roboto({
@@ -21,19 +20,13 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const nonce = headers().get("x-nonce")!;
-
 	return (
 		<html lang="en">
 			<body>
 				<Header />
 				<div className="mt-[72px] lg:mt-[100px] ">{children}</div>
 				<Footer />
-				<Script
-					src="https://www.googletagmanager.com/gtag/js"
-					strategy="afterInteractive"
-					nonce={nonce}
-				/>
+				<Script src="https://js.stripe.com/v3/" strategy="afterInteractive" />
 			</body>
 		</html>
 	);
