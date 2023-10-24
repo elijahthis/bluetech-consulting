@@ -9,16 +9,18 @@ interface ImgTextColProps {
 const ImgTextCol = ({ imgURL, textSide, children }: ImgTextColProps) => {
 	return (
 		<div
-			className={`lg:px-[7.08vw] px-4 lg:grid lg:grid-cols-2 flex flex-col items-center gap-12`}
+			className={`lg:px-[7.08vw] px-4 flex lg:flex-row flex-col items-stretch justify-center gap-12`}
 		>
 			<Image
 				src={imgURL}
 				alt=""
 				width={594}
 				height={443}
-				className={`w-full ${textSide === "right" ? "" : "lg:order-1 right"}`}
+				className={`lg:w-[500px] w-full object-cover object-center ${
+					textSide === "right" ? "" : "lg:order-1 right"
+				}`}
 			/>
-			<div>{children}</div>
+			<div className="w-full">{children}</div>
 		</div>
 	);
 };

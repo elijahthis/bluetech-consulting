@@ -3,11 +3,11 @@ import home1Img from "@/assets/images/about-selfie.jpg";
 
 export const FounderMessage = () => {
 	return (
-		<section className="flex lg:flex-row flex-col items-start justify-center gap-12 py-6 px-4 pb-[60px]">
+		<section className="flex lg:flex-row flex-col items-stretch justify-center gap-12 py-6 px-4 pb-[60px]">
 			<Image
 				src={home1Img}
 				alt={`Founder - Yinka`}
-				className="w-full lg:w-[400px]"
+				className="w-full lg:w-[500px] object-cover object-center"
 			/>
 			<div>
 				<h2 className="text-[28px] leading-[normal] mb-6 ">

@@ -67,6 +67,7 @@ h6 {
 	height: calc(100vh - 100px);
 	width: 100vw;
 	object-fit: cover;
+	object-position: center;
 }
 
 @media (max-width: 1024px) {
