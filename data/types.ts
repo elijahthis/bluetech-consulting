@@ -22,3 +22,10 @@ export type IConsulting = {
 	img_url: string;
 	booking_url: string;
 };
+
+export type IUserDetails = {
+	firstName: string;
+	lastName: string;
+	email: string;
+	phone: string;
+};

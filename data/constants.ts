@@ -188,3 +188,11 @@ export const consultingList: IConsulting[] = [
 		booking_url: "",
 	},
 ];
+
+export const courseMap = new Map<string, string>([
+	[courseList[0].id, courseList[0].long_title],
+	[courseList[1].id, courseList[1].long_title],
+	[courseList[2].id, courseList[2].long_title],
+	[courseList[3].id, courseList[3].long_title],
+]);
+

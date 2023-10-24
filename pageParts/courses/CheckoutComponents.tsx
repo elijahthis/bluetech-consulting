@@ -3,25 +3,66 @@ import Button from "@/components/Button";
 import InputComponent from "@/components/InputComponent";
 import RadioComponent from "@/components/RadioComponent";
 import { BankIcon, CardIcon, PaypalIcon } from "@/components/svgs";
-import { useRouter } from "next/navigation";
-import { Dispatch, SetStateAction } from "react";
+import { IUserDetails } from "@/data/types";
+import handleCheckout from "@/lib/getStripe";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Dispatch, SetStateAction, useState } from "react";
 
 interface PersonalInfoProps {
 	currentStep: number;
 	setCurrentStep: Dispatch<SetStateAction<number>>;
+	userDetails: IUserDetails;
+	setUserDetails: React.Dispatch<React.SetStateAction<IUserDetails>>;
 }
 
 export const PersonalInfo = ({
 	currentStep,
 	setCurrentStep,
+	userDetails,
+	setUserDetails,
 }: PersonalInfoProps) => {
+	const searchParams = useSearchParams();
+
+	const [loading, setLoading] = useState(false);
+
+	const priceIdMap = new Map<string, string>([
+		["business-analysis", process.env.NEXT_PUBLIC_BUSINESS_ANALYSIS_PRICE_ID!],
+		["scrum-mastering", process.env.NEXT_PUBLIC_SCRUM_MASTERING_PRICE_ID!],
+		["product-ownership", process.env.NEXT_PUBLIC_PRODUCT_OWNERSHIP_PRICE_ID!],
+		["data-analysis", process.env.NEXT_PUBLIC_DATA_ANALYSIS_PRICE_ID!],
+	]);
+
 	return (
 		<form
 			action=""
 			className="flex flex-col gap-6 items-stretch"
-			onSubmit={(e) => {
+			onSubmit={async (e: React.FormEvent<HTMLFormElement>) => {
 				e.preventDefault();
-				setCurrentStep(currentStep + 1);
+
+				console.log(userDetails);
+
+				//------------- Stripe Checkout -------------
+				setLoading(true);
+				try {
+					await handleCheckout(
+						priceIdMap.get(searchParams.get("courseRef")!)!,
+						1,
+						userDetails.email,
+						`${
+							process.env.NEXT_PUBLIC_BASE_URL
+						}/courses/success?courseRef=${searchParams.get(
+							"courseRef"
+						)}&email=${userDetails.email}`,
+						`${
+							process.env.NEXT_PUBLIC_BASE_URL
+						}/courses/failure?courseRef=${searchParams.get(
+							"courseRef"
+						)}&email=${userDetails.email}`
+					);
+				} catch (error) {
+				} finally {
+					setLoading(false);
+				}
 			}}
 		>
 			<div className="lg:grid lg:grid-cols-2 flex flex-col items-stretch gap-4">
@@ -31,6 +72,14 @@ export const PersonalInfo = ({
 					name="firstName"
 					type="text"
 					showLabel={false}
+					required={true}
+					value={userDetails.firstName}
+					onChange={(e) =>
+						setUserDetails({
+							...userDetails,
+							firstName: e.target.value,
+						})
+					}
 				/>
 				<InputComponent
 					label="Last name"
@@ -38,6 +87,14 @@ export const PersonalInfo = ({
 					name="lastName"
 					type="text"
 					showLabel={false}
+					required={true}
+					value={userDetails.lastName}
+					onChange={(e) =>
+						setUserDetails({
+							...userDetails,
+							lastName: e.target.value,
+						})
+					}
 				/>
 			</div>
 			<InputComponent
@@ -46,6 +103,14 @@ export const PersonalInfo = ({
 				name="email"
 				type="email"
 				showLabel={false}
+				required={true}
+				value={userDetails.email}
+				onChange={(e) =>
+					setUserDetails({
+						...userDetails,
+						email: e.target.value,
+					})
+				}
 			/>
 			<InputComponent
 				label="Phone"
@@ -53,11 +118,20 @@ export const PersonalInfo = ({
 				name="phone"
 				type="tel"
 				showLabel={false}
+				required={true}
+				value={userDetails.phone}
+				onChange={(e) =>
+					setUserDetails({
+						...userDetails,
+						phone: e.target.value,
+					})
+				}
 			/>
 			<Button
 				type="submit"
 				onClick={() => {}}
 				style={{ width: "100%", marginTop: "8px" }}
+				loading={loading}
 			>
 				Proceed to Payment
 			</Button>

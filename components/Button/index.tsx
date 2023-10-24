@@ -1,5 +1,6 @@
 "use client";
 import { CSSProperties, MouseEvent } from "react";
+import { BiLoaderAlt } from "react-icons/bi";
 
 interface ButtonProps {
 	children: string | JSX.Element;
@@ -22,7 +23,7 @@ const Button = ({
 }: ButtonProps) => {
 	return (
 		<button
-			className={`lg:rounded-2xl rounded-lg bg-[#051C2C] text-white w-max lg:px-10 px-6 lg:py-6 py-4 text-base `}
+			className={`lg:rounded-2xl rounded-lg bg-[#051C2C] text-white w-max lg:px-10 px-6 lg:py-6 py-4 text-base flex justify-center items-center `}
 			onClick={(e: MouseEvent<HTMLButtonElement>) => {
 				if (disabled) e.preventDefault();
 				else if (!loading) onClick && onClick();
@@ -31,7 +32,7 @@ const Button = ({
 			disabled={disabled}
 			style={style}
 		>
-			{children}
+			{loading ? <BiLoaderAlt className="btn-loader" /> : children}
 		</button>
 	);
 };
