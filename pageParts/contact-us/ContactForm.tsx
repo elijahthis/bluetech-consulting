@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/components/Button";
 import InputComponent from "@/components/InputComponent";
+import { sendContactEmail } from "@/requests/emails";
 
 export const ContactForm = ({
 	setDone,
@@ -11,8 +12,9 @@ export const ContactForm = ({
 		<form
 			className="flex flex-col gap-4 items-stretch"
 			action=""
-			onSubmit={(e) => {
+			onSubmit={async (e) => {
 				e.preventDefault();
+				await sendContactEmail();
 				setDone(true);
 			}}
 		>
@@ -62,6 +64,7 @@ export const ContactForm = ({
 			<Button type="submit" onClick={() => {}}>
 				Submit Feedback
 			</Button>
+			<p onClick={() => sendContactEmail()}>lalalalal</p>
 		</form>
 	);
 };
