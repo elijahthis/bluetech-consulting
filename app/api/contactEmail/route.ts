@@ -34,14 +34,14 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
 				extName: ".hbs",
 			};
 
-			transporter.use("compile", hbs(create(handlebarsOptions)));
+			transporter.use("compile", hbs(handlebarsOptions as any));
 
 			// Define the email message
 			const mailOptions = {
 				from: "hello@elijahthis.com",
 				to: body?.to,
 				subject: body?.subject,
-				template: "contactEmail",
+				template: "contactEmailCustomer",
 				context: {
 					name: "Elijah",
 					company: "my company",
