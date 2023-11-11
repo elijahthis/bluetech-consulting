@@ -21,6 +21,14 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
 					user: "hello@elijahthis.com",
 					pass: "Espionage098!",
 				},
+
+				// host: "smtp.ionos.co.uk",
+				// port: 25, // Use the appropriate port (587 for TLS, 465 for SSL, 25 for non-secure)
+				// secure: false, // True for 465, false for other ports
+				// auth: {
+				// 	user: "info@bluetechconsulting.uk", // Your Ionos email address
+				// 	pass: "L@gbaja_1973", // Your Ionos email password
+				// },
 			});
 
 			// point to the template folder
@@ -37,19 +45,38 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
 			transporter.use("compile", hbs(handlebarsOptions as any));
 
 			// Define the email message
-			const mailOptions = {
+			const mailOptionsCustomer = {
 				from: "hello@elijahthis.com",
-				to: body?.to,
-				subject: body?.subject,
+				to: body?.email,
+				subject: "Thank you for contacting BlueTech Consulting",
 				template: "contactEmailCustomer",
 				context: {
-					name: "Elijah",
-					company: "my company",
+					firstName: body?.firstName,
+					lastName: body?.lastName,
+					phone: body?.phone,
+					email: body?.email,
+					subject: body?.subject,
+					comment: body?.comment,
+				},
+			};
+			const mailOptionsCompany = {
+				from: "hello@elijahthis.com",
+				to: "info@bluetechconsulting.uk",
+				subject: `BlueTech Contact Form -- You have a pending message from ${body?.firstName} ${body?.lastName}`,
+				template: "contactEmailCompany",
+				context: {
+					firstName: body?.firstName,
+					lastName: body?.lastName,
+					phone: body?.phone,
+					email: body?.email,
+					subject: body?.subject,
+					comment: body?.comment,
 				},
 			};
 
 			// Send the email
-			await transporter.sendMail(mailOptions);
+			await transporter.sendMail(mailOptionsCustomer);
+			await transporter.sendMail(mailOptionsCompany);
 
 			return NextResponse.json({ message: "Email sent successfully" });
 		} catch (error) {

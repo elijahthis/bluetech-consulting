@@ -1,14 +1,17 @@
 import axios, { AxiosResponse, AxiosError } from "axios";
 
-export const sendContactEmail = async () => {
+export const sendContactEmail = async (formData: {
+	firstName: string;
+	lastName: string;
+	phone: string;
+	email: string;
+	subject?: string;
+	comment: string;
+}) => {
 	try {
 		const response: AxiosResponse | AxiosError = await axios.post(
 			"/api/contactEmail",
-			{
-				to: "hello@elijahthis.com",
-				subject: "Hello from Next.js",
-				text: "This is a test email from a Next.js API route.",
-			}
+			formData
 		);
 
 		if ("data" in response) {
@@ -16,6 +19,8 @@ export const sendContactEmail = async () => {
 		} else {
 			console.error("Error:", response.message);
 		}
+
+		return response;
 	} catch (error) {
 		console.error("Error:", error);
 	}
