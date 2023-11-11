@@ -25,3 +25,27 @@ export const sendContactEmail = async (formData: {
 		console.error("Error:", error);
 	}
 };
+
+export const sendCourseEmail = async (formData: {
+	firstName: string;
+	lastName: string;
+	email: string;
+	course: string;
+}) => {
+	try {
+		const response: AxiosResponse | AxiosError = await axios.post(
+			"/api/coursesEmail",
+			formData
+		);
+
+		if ("data" in response) {
+			console.log("Email sent successfully");
+		} else {
+			console.error("Error:", response.message);
+		}
+
+		return response;
+	} catch (error) {
+		console.error("Error:", error);
+	}
+};

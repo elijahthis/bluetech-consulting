@@ -22,12 +22,20 @@ const FailurePage = () => {
 							process.env.NEXT_PUBLIC_BASE_URL
 						}/courses/success?courseRef=${searchParams.get(
 							"courseRef"
-						)}&email=${searchParams.get("email")!}`,
+						)}&email=${searchParams.get("email")!}&firstName=${searchParams.get(
+							"firstName"
+						)!}&lastName=${searchParams.get(
+							"lastName"
+						)!}&phone=${searchParams.get("phone")!}`,
 						`${
 							process.env.NEXT_PUBLIC_BASE_URL
 						}/courses/failure?courseRef=${searchParams.get(
 							"courseRef"
-						)}&email=${searchParams.get("email")!}`
+						)}&email=${searchParams.get("email")!}&firstName=${searchParams.get(
+							"firstName"
+						)!}&lastName=${searchParams.get(
+							"lastName"
+						)!}&phone=${searchParams.get("phone")!}`
 					);
 				}}
 				success={false}

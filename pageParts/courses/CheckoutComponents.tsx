@@ -52,12 +52,16 @@ export const PersonalInfo = ({
 							process.env.NEXT_PUBLIC_BASE_URL
 						}/courses/success?courseRef=${searchParams.get(
 							"courseRef"
-						)}&email=${userDetails.email}`,
+						)}&email=${userDetails.email}&firstName=${
+							userDetails.firstName
+						}&lastName=${userDetails.lastName}&phone=${userDetails.phone}`,
 						`${
 							process.env.NEXT_PUBLIC_BASE_URL
 						}/courses/failure?courseRef=${searchParams.get(
 							"courseRef"
-						)}&email=${userDetails.email}`
+						)}&email=${userDetails.email}&firstName=${
+							userDetails.firstName
+						}&lastName=${userDetails.lastName}&phone=${userDetails.phone}`
 					);
 				} catch (error) {
 				} finally {
