@@ -196,3 +196,8 @@ export const courseMap = new Map<string, string>([
 	[courseList[3].id, courseList[3].long_title],
 ]);
 
+export const consultTimeList: any = {
+	"30_mins": { full: "30 minutes", linkEnd: "30-mins-consultation" },
+	"60_mins": { full: "60 minutes", linkEnd: "60-mins-consultation" },
+	"90_mins": { full: "90 minutes", linkEnd: "90-mins-consultation-1" },
+};

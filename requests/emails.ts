@@ -49,3 +49,27 @@ export const sendCourseEmail = async (formData: {
 		console.error("Error:", error);
 	}
 };
+
+export const sendConsultingEmail = async (formData: {
+	eventDate: string;
+	startTime: string;
+	endTime: string;
+	duration: string;
+}) => {
+	try {
+		const response: AxiosResponse | AxiosError = await axios.post(
+			"/api/consultingEmail",
+			formData
+		);
+
+		if ("data" in response) {
+			console.log("Email sent successfully");
+		} else {
+			console.error("Error:", response.message);
+		}
+
+		return response;
+	} catch (error) {
+		console.error("Error:", error);
+	}
+};

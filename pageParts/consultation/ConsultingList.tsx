@@ -36,8 +36,7 @@ const ConsultingList = () => {
 							action: () => {
 								if (window !== undefined)
 									window.open(
-										"https://calendly.com/bluetechconsulting/90-mins-consultation-1",
-										"_blank"
+										"https://calendly.com/bluetechconsulting/90-mins-consultation-1"
 									);
 							},
 						},
@@ -46,8 +45,7 @@ const ConsultingList = () => {
 							action: () => {
 								if (window !== undefined)
 									window.open(
-										"https://calendly.com/bluetechconsulting/60-mins-consultation",
-										"_blank"
+										"https://calendly.com/bluetechconsulting/60-mins-consultation"
 									);
 							},
 						},
@@ -56,8 +54,7 @@ const ConsultingList = () => {
 							action: () => {
 								if (window !== undefined)
 									window.open(
-										"https://calendly.com/bluetechconsulting/30-mins-consultation",
-										"_blank"
+										"https://calendly.com/bluetechconsulting/30-mins-consultation"
 									);
 							},
 						},
