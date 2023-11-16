@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/components/Button";
 import InputComponent from "@/components/InputComponent";
+import PhoneInputComponent from "@/components/PhoneInputComponent";
 import { sendContactEmail } from "@/requests/emails";
 import { FormEvent, useState } from "react";
 
@@ -75,7 +76,7 @@ export const ContactForm = ({
 					}
 				/>
 			</div>
-			<InputComponent
+			{/* <InputComponent
 				label="Phone"
 				placeholder="Enter Phone"
 				name="phone"
@@ -85,6 +86,17 @@ export const ContactForm = ({
 					setFormData({
 						...formData,
 						phone: e.target.value,
+					})
+				}
+			/> */}
+			<PhoneInputComponent
+				label="Phone"
+				required={true}
+				value={formData.phone}
+				onChange={(val) =>
+					setFormData({
+						...formData,
+						phone: val?.toString()!,
 					})
 				}
 			/>

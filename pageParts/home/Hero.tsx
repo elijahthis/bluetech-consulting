@@ -20,12 +20,12 @@ export const Hero = () => {
 				</p> */}
 				<div className="flex flex-row items-center gap-6">
 					<Link href="/courses">
-						<button className="bg-white text-[#051C2C] py-4 lg:py-6 px-3 lg:px-10 font-semibold lg:rounded-2xl rounded-lg cursor-pointer w-max text-sm ">
+						<button className="bg-white text-[#051C2C] py-4 lg:py-6 px-3 lg:px-10 font-semibold lg:rounded-2xl rounded-lg cursor-pointer w-max ">
 							Find out more
 						</button>
 					</Link>
 					<Link href="/consulting">
-						<button className="bg-white text-[#051C2C] py-4 lg:py-6 px-3 lg:px-10 font-semibold lg:rounded-2xl rounded-lg cursor-pointer w-max text-sm ">
+						<button className="bg-white text-[#051C2C] py-4 lg:py-6 px-3 lg:px-10 font-semibold lg:rounded-2xl rounded-lg cursor-pointer w-max ">
 							Book a free consultation
 						</button>
 					</Link>

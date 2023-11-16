@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/components/Button";
 import InputComponent from "@/components/InputComponent";
+import PhoneInputComponent from "@/components/PhoneInputComponent";
 import RadioComponent from "@/components/RadioComponent";
 import { BankIcon, CardIcon, PaypalIcon } from "@/components/svgs";
 import { IUserDetails } from "@/data/types";
@@ -116,7 +117,7 @@ export const PersonalInfo = ({
 					})
 				}
 			/>
-			<InputComponent
+			{/* <InputComponent
 				label="Phone"
 				placeholder="Enter Phone"
 				name="phone"
@@ -128,6 +129,18 @@ export const PersonalInfo = ({
 					setUserDetails({
 						...userDetails,
 						phone: e.target.value,
+					})
+				}
+			/> */}
+			<PhoneInputComponent
+				label="Phone"
+				showLabel={false}
+				required={true}
+				value={userDetails.phone}
+				onChange={(val) =>
+					setUserDetails({
+						...userDetails,
+						phone: val?.toString()!,
 					})
 				}
 			/>

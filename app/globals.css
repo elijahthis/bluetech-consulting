@@ -60,6 +60,7 @@
 body {
 	color: #1e1e1e;
 	font-family: "McKinsey Sans";
+	font-size: 18px;
 }
 
 h1,
@@ -84,6 +85,10 @@ h6 {
 	-webkit-animation: spin 0.8s linear infinite; /* Safari */
 	animation: spin 0.8s linear infinite;
 	color: #ffffff;
+}
+
+.PhoneInputInput {
+	outline: none !important;
 }
 
 @media (max-width: 1024px) {
